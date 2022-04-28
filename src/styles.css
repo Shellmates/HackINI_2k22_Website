@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Urbanist:wght@500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,footer{
+  font-family: "Urbanist", sans-serif;
+  background: #100031;
+}
+.previous-title ,.contact-us-title{
+  font-family: "Anton", sans-serif;
+}
+
+/*GLOBAL VARIABLES*/
+:root {
+    --background_color: #100031;
+    --mobile-nav-color: rgb(37, 33, 65);
+  }
+
+  .font-anton {
+    font-family: "Anton", sans-serif;
+  }
+
+
+.font-urbanist {
+    font-family: 'Urbanist', sans-serif;
+}
+
+
+/*FIN*/
+
+/*navbar*/
+
+.navbar-fixed-top.scrolled {
+  background-color: #0D0027 !important;
+  transition: background-color 500ms ease;
+}
+
+
+.mobile-nav {
+    top: 0;
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    left: 100%;
+    z-index: 15;
+    padding-top: 100px;
+    display: block;
+    background-color: var(--mobile-nav-color);
+    -webkit-transition: left 0.4s linear;
+    transition: left 0.4s linear;
+  }
+ 
+  
+  .mobile-nav.is-active {
+    left: 0;
+  }
+
+  .IndicateSec .nav-bar li a {
+    color: #FFC947;
+  }
+  
+  .nav-hidden {
+      display:none;
+  }
+
+  .hamburger {
+    margin: 3% 5%;
+    position: relative;
+    width: 35px;
+    cursor: pointer;
+    z-index: 100;
+    height: 35px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    display: block;
+  }
+  
+  .hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .hamburger.is-active:before {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+  
+  .hamburger.is-active .bar {
+    opacity: 0;
+  }
+  
+  .hamburger.is-active:after {
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+    transform: rotate(45deg) translate(-9px, -8px);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+
+  }
