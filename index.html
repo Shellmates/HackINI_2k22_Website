@@ -244,17 +244,47 @@
     </div>
 
     <!-- Speakers section -->
-    <section class="flex flex-col items-center gap-y-8 lg:gap-y-12">
-      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4">
-        <h3 class="text-xl lg:text-2xl font-extralight">{ Conferences Speakers }</h3>
-        <h2 class="uppercase text-3xl lg:text-4xl font-bold">Speakers</h2>
+    <section
+      class="flex flex-col items-center gap-y-8 lg:gap-y-12 relative my-32"
+    >
+      <img
+        class="absolute right-0 bottom-0"
+        src="./public/assets/1.svg"
+        alt=""
+      />
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-xl lg:text-2xl font-extralight">
+          { Conferences Speakers }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          Speakers
+        </h2>
       </div>
-      <div id="speakers" class="w-4/5 flex justify-between flex-wrap">
+      <div id="speakers" class="w-4/5 flex justify-between flex-wrap relative">
         <!-- Speakers here -->
+      </div>
+    </section>
+    <!-- End -->
+
+    <!-- Gallery section -->
+    <section class="my-32 flex flex-col gap-y-8 lg:gap-y-12">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-xl lg:text-2xl font-extralight">
+          { Photos from previous editions }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          Gallery
+        </h2>
+      </div>
+      <div class="slider">
+        <div id="gallery" class="slide-track">
+          <!-- Pictures here -->
+        </div>
       </div>
     </section>
 
     <script src="/scripts/speakers.js"></script>
+    <script src="/scripts/gallery.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
