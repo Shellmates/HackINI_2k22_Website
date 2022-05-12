@@ -21,6 +21,5 @@ pictures.map(picture => {
     container.innerHTML = `
         <img src="${picture}" class="w-[300px] mx-[10px] h-[200px] object-cover"/>
     `
-    console.log(container.innerHTML)
     gallery.append(container)
 })

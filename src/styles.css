@@ -8,7 +8,7 @@
 body,
 footer {
   font-family: "Urbanist", sans-serif;
-  background: #100031;
+  background: #000711;
 }
 .previous-title,
 .contact-us-title {
@@ -120,6 +120,8 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
+/* Gallery styles */
+
 @-webkit-keyframes scroll {
   0% {
     -webkit-transform: translateX(0);
@@ -159,3 +161,20 @@ footer {
   height: 200px;
   width: 320px;
 }
+
+/* Gallery styles end */
+
+/* Agenda styles */
+.grad {
+  padding-left: 1rem;
+  color: white;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      #74E250, 
+      #24ECCA
+    ) 1 100%;
+}
+/* Agenda styles end */
