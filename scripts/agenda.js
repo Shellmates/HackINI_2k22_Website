@@ -67,7 +67,7 @@ days.map(day => {
     titleContainer.classList = "w-36"
 
     titleContainer.innerHTML = `
-        <h4 class="uppercase font-bold title-gradient text-lg md:text-3xl lg:text-4xl">${day.day}</h4>
+        <h4 class="uppercase font-bold title-gradient text-lg md:text-3xl">${day.day}</h4>
         <h5 class="title-gradient text-base md:text-xl lg:text-2xl">${day.date}</h5>
     `
 

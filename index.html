@@ -248,12 +248,12 @@
       class="flex flex-col items-center gap-y-8 lg:gap-y-12 relative my-32"
     >
       <img
-        class="absolute right-0 bottom-0"
+        class="absolute right-0 bottom-0 w-16 lg:w-24"
         src="./public/assets/1.svg"
         alt=""
       />
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
-        <h3 class="text-xl lg:text-2xl font-extralight">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
           { Conferences Speakers }
         </h3>
         <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
@@ -261,7 +261,7 @@
         </h2>
       </div>
       <div id="speakers" class="w-4/5 flex justify-between flex-wrap relative">
-        <!-- Speakers here -->
+        <!---->
       </div>
     </section>
     <!-- End -->
@@ -269,7 +269,7 @@
     <!-- Gallery section -->
     <section class="my-32 flex flex-col gap-y-8 lg:gap-y-12">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4">
-        <h3 class="text-xl lg:text-2xl font-extralight">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
           { Photos from previous editions }
         </h3>
         <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
@@ -278,24 +278,41 @@
       </div>
       <div class="slider">
         <div id="gallery" class="slide-track">
-          <!-- Pictures here -->
+          <!---->
         </div>
       </div>
     </section>
     <!-- End -->
-
+      
     <!-- Agenda section -->
     <section class="my-32 flex flex-col gap-y-8 lg:gap-y-12 relative">
+      <img src="/public/assets/2.svg" class="absolute left-0 bottom-0 lg:w-24 xl:w-32 h-auto hidden lg:block" alt="">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
-        <h3 class="text-xl lg:text-2xl font-extralight">
-          { Even timeline }
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
+          { Event timeline }
         </h3>
         <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
           Agenda
         </h2>
       </div>
-      <div id="agenda" class="flex flex-col w-4/5 xl:w-3/5 mx-auto gap-y-8">
+      <div id="agenda" class="flex flex-col w-4/5 xl:w-3/5 mx-auto gap-y-8 relative">
+        <!---->
+      </div>
+    </section>
+    <!-- End -->
 
+    <!-- Reviews section -->
+    <section class="my-32 flex flex-col gap-y-8 lg:gap-y-12">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
+          { What participants say about HackINI }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          Reviews
+        </h2>
+      </div>
+      <div id="reviews" class="w-4/5 mx-auto flex justify-between flex-wrap relative">
+        <!---->
       </div>
     </section>
     <!-- End -->
@@ -303,6 +320,7 @@
     <script src="/scripts/speakers.js"></script>
     <script src="/scripts/gallery.js"></script>
     <script src="/scripts/agenda.js"></script>
+    <script src="/scripts/reviews.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
