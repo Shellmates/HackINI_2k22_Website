@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hack.INI Website</title>
-
     <meta
-      content="cybersecurity, algiers, ctf, week, challenges, shellmates"
+      content="cybersecurity, algiers, ctf, challenges, shellmates"
       name="keywords"
     />
+    <meta content="Hack.INI is a well known event held by Shellmates club for many years now, it stands for Hack Initiation, which means it is made to introduce beginners to the world of cybersecurity and ethical hacking." />
 
-    <meta content="Hack.INI is a cyber-security event held by Shellmates " />
+
     <meta
       property="og:image"
-      content="https://res.cloudinary.com/shellmates-club/image/upload/v1649865630/hack_till_shour/bg-meta_t498xf.png"
+      content="https://res.cloudinary.com/shellmates-club/image/upload/v1652641249/hackini/hackini-bg_ysc4kh.png"
     />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="600" />
@@ -23,22 +23,22 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://hacktills7our22.shellmates.club/"
+      content="https://hackini22.shellmates.club/"
     />
     <meta property="og:title" content="Hack.INI Event" />
 
     <meta
       property="og:description"
-      content="Hack.INI is a cyber-security event held by Shellmates "
+      content="Hack.INI is a well known event held by Shellmates club for many years now, it stands for Hack Initiation, which means it is made to introduce beginners to the world of cybersecurity and ethical hacking."
     />
 
     <!-- Favicons -->
     <link
-      href="https://res.cloudinary.com/shellmates-club/image/upload/c_scale,w_17/v1649865800/hack_till_shour/logo_qcjkps.png"
+      href="https://res.cloudinary.com/shellmates-club/image/upload/v1652640958/hackini/hackini_gradient_qykb9g.png"
       rel="icon"
     />
     <link
-      href="https://res.cloudinary.com/shellmates-club/image/upload/v1649865630/hack_till_shour/bg-meta_t498xf.png"
+      href="https://res.cloudinary.com/shellmates-club/image/upload/v1652641249/hackini/hackini-bg_ysc4kh.png"
       rel="apple-touch-icon"
     />
 
@@ -63,87 +63,104 @@
   </head>
 
   <body class="text-white">
-    <nav
-      class="fixed top-0 z-30 right-0 left-0 p-1 leading-loose navbar-fixed-top"
-    >
-      <button href="#" class="hamburger">
-        <div class="bar"></div>
-      </button>
-      <div class="w-screen nav-hidden md:block">
-        <ul
-          class="nav-bar text-lg lg:text-xl font-urbanist text-center m-0 p-5"
-        >
-          <li class="py-5 inline">
-            <a class="inline-block px-9" href="#home">Home</a>
-          </li>
-          <img class="py-5 inline w-4" src="../public/assets/star.svg" />
-          <li class="py-5 inline w-4">
-            <a class="inline-block px-9" href="#about">About</a>
-          </li>
-          <img class="py-5 inline w-4" src="../public/assets/star.svg" />
-          <!-- <li class="py-5 inline w-4"><a class="inline-block px-9 " href="#agenda">Agenda</a></li>
-                    <img class="py-5 inline w-4" src="../public/assets/star.svg"> -->
-          <li class="py-5 inline w-4">
-            <a class="inline-block px-9" href="#venue">Venue</a>
-          </li>
-          <img class="py-5 inline w-4" src="../public/assets/star.svg" />
-          <li class="py-5 inline w-4">
-            <a class="inline-block px-9" href="#sponsors">Sponsors</a>
-          </li>
-          <!-- <img class="py-5 inline w-4" src="../public/assets/star.svg">
-                    <li class="py-5 inline w-4"><a class="inline-block px-9 " href="#editions">Editions</a></li> -->
-          <img class="py-5 inline w-4" src="../public/assets/star.svg" />
-          <li class="py-5 inline w-4">
-            <a class="inline-block px-9" href="#contact">Contact Us</a>
-          </li>
-        </ul>
+    
+    <!-- Navbar Section -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div class="w-full text-white md:bg-transparent dark-mode:text-gray-200 dark-mode:bg-gray-800 z-50 fixed navbar-fixed-top">
+      <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+        <div class="p-4 flex flex-row items-center justify-end">
+          <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow p-4 hidden md:flex md:justify-center md:flex-row">
+          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text  focus:outline-none focus:shadow-outline" href="#hero">Home</a>
+          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#sponsors">Sponsors</a>
+          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#about">About</a>
+          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#venue">Venue</a>
+          <!-- <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#nagenda">Agenda</a> -->
+          <!-- <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#nspeakers">Speakers</a> -->
+          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#ngallery">Gallery</a>
+          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#faq">FAQ</a>
+        </nav>
       </div>
-
-      <!--Mobile navbar-->
-      <div class="mobile-nav md:nav-hidden">
-        <ul class="flex flex-col text-center">
-          <li class="p-4 list-none hover:bg-slate-600 hover:cursor-pointer">
-            <a href="#home" class="redirect_sec">Home</a>
-          </li>
-          <img class="py-2 w-3 mx-auto" src="../public/assets/star.svg" />
-          <li class="p-4 list-none hover:bg-slate-600 hover:cursor-pointer">
-            <a href="#about" class="redirect_sec">About</a>
-          </li>
-          <!-- <img class="py-2 w-3 mx-auto" src="../public/assets/star.svg">
-                <li class="p-4 list-none hover:bg-slate-600 hover:cursor-pointer"><a href="#agenda" class="redirect_sec">Agenda</a></li> -->
-          <img class="py-2 w-3 mx-auto" src="../public/assets/star.svg" />
-          <li class="p-4 list-none hover:bg-slate-600 hover:cursor-pointer">
-            <a href="#venue" class="redirect_sec">Venue</a>
-          </li>
-          <img class="py-2 w-3 mx-auto" src="../public/assets/star.svg" />
-          <li class="p-4 list-none hover:bg-slate-600 hover:cursor-pointer">
-            <a href="#sponsors" class="redirect_sec">Sponsors</a>
-          </li>
-          <!-- <img class="py-2 w-3 mx-auto" src="../public/assets/star.svg">
-                <li class="p-4 list-none hover:bg-slate-600 hover:cursor-pointer"><a href="#editions" class="redirect_sec">Editions</a></li> -->
-          <img class="py-2 w-3 mx-auto" src="../public/assets/star.svg" />
-          <li class="p-4 list-none hover:bg-slate-600 hover:cursor-pointer">
-            <a href="#contact" class="redirect_sec">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
+    </div>
     <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-      crossorigin="anonymous"
-    ></script>
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
     <script>
-      $(function () {
+        $(function () {
         $(document).scroll(function () {
           var $nav = $(".navbar-fixed-top");
-          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+          $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
         });
-      </script>
+      });
+    </script>
+
+    <!-- Hero Section -->
+
+    <section id="hero" class="flex flex-col pb-40 text-center gap-y-8 relative overflow-hidden">
+
+      <img src="./public/assets/hero_top_right.svg" class="absolute -top-10 -right-10 w-32 sm:w-44 lg:-top-16 lg:w-48 lg:-right-12 xl:w-56 xl:-right-16 h-auto  rotate" alt="">
+
+      <img src="./public/assets/hero_bottom_right.svg" class="absolute bottom-0 -right-10 w-32 sm:w-44 lg:w-48 lg:-right-12 xl:w-56 xl:-right-16 h-auto  rotate" alt="">
+
+      <img src="./public/assets/hero_top_left.svg" class="absolute -top-12 -left-10 w-32 sm:w-44 lg:-top-16 lg:w-48 lg:-left-12 xl:w-56 xl:-left-16 h-auto  rotate" alt="">
+
+      <img src="/public/assets/shellmate_logo.png" alt="Shellmates logo" class="hero-logo w-10 mt-20 md:mt-28 md:w-16 self-center" >
+      <h1 class="title-gradient font-gilroy-heavy text-3xl md:text-6xl mt-4">The Annual Hack.INI Event</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 mx-auto">
+        <div class="inline-flex items-center">
+          <img src="/public/assets/schedule.svg" alt="schedule">
+          <p class="text-xl text-white ml-4">May 26th-28th, 2022.</p>
+        </div>
+        <div class="inline-flex items-center">
+          <img src="/public/assets/localisation.svg" alt="localisation" class="inline">
+          <p class="text-xl text-white ml-4">ESI, Oued Smar, Algiers.</p>
+        </div>
+      </div>
+      <p class="text-white text-2xl md:text-3xl font-gilro-medium capitalize">Starting in :</p>
+      <!-- Countdown -->
+    <div class="countdown-about w-full h-full title-gradient">
+      <div class="countdown flex flex-row justify-center lg:mb-20">
+        <div class="daysC flex flex-col justify-center align-center text-center">
+          <p class="daysTXT mb-3.5 lg:text-5xl text-xl">00</p>
+          <p class="lg:text-3xl text-lg">Days</p>
+        </div>
+        <div class="text-center">
+          <p class="lg:text-3xl mb-3.5 text-lg mx-3 md:mx-8"> - </p>
+        </div>
+        <div class="hoursC flex flex-col justify-center align-center text-center">
+          <p class="hoursTXT lg:text-5xl mb-3.5 text-xl">00</p>
+          <p class="lg:text-3xl text-lg">Hours</p>
+        </div>
+        <div class="text-center">
+          <p class="lg:text-3xl mb-3.5 text-lg mx-2 md:mx-8"> - </p>
+        </div>
+        <div class="minutesC flex flex-col justify-center align-center text-center">
+          <p class="minutesTXT lg:text-5xl mb-3.5 text-xl">00</p>
+          <p class="lg:text-3xl text-xl">Minutes</p>
+        </div>
+        <div class="text-center">
+          <p class="lg:text-3xl mb-3.5 text-lg mx-1 md:mx-6"> - </p>
+        </div>
+        <div class="secondsC flex flex-col justify-center align-center text-center">
+          <p class="secondsTXT lg:text-5xl mb-3.5 text-xl">00</p>
+          <p class="lg:text-3xl text-lg">Seconds</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END COUNTDOWN -->
+
+    </section>
 
     <!-- Scrool top button -->
-    <button class="fixed w-12 h-12 bottom-32 right-10 bg-[#0D0027] fill-white ease-out hover:bg-white hover:fill-[#02121F] hover:ease-out px-3 py-3 rounded-full cursor-pointer z-50" onclick="topFunction()" id="myBtn" title="Go to top">
+    <button class="fixed w-12 h-12 bottom-32 right-10 bg-[#000f23] fill-white ease-out hover:bg-white hover:fill-[#02121F] hover:ease-out px-3 py-3 rounded-full cursor-pointer z-50" onclick="topFunction()" id="myBtn" title="Go to top">
       <?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><title/><path d="M82.6074,62.1072,52.6057,26.1052a6.2028,6.2028,0,0,0-9.2114,0L13.3926,62.1072a5.999,5.999,0,1,0,9.2114,7.6879L48,39.3246,73.396,69.7951a5.999,5.999,0,1,0,9.2114-7.6879Z"/></svg>
     </button> 
 
@@ -174,138 +191,513 @@
       }
     </script>
 
-    <!-- COUNTDOWN -->
-    <div class="countdown h-full w-full">
-      <div
-        class="mx-auto flex flex-row gap-x-16 sm:gap-x-24 align-middle justify-center"
-      >
-        <div class="text-center">
-          <img
-            src="../public/assets/lamp.png"
-            alt=""
-            class="mx-auto lamp w-12 sm:w-16 mb-5 md:w-24 md:mb-10"
-          />
-          <p
-            class="daysTXT translate-y-[-280%] sm:translate-y-[-335%] md:translate-y-[-395%] font-anton md:text-3xl text-lg"
-          >
-            00
-          </p>
-          <p
-            class="font-anton text-[#FFC947] translate-y-[-100%] md:text-3xl text-lg"
-          >
-            Days
-          </p>
-        </div>
-        <div class="text-center">
-          <img
-            src="../public/assets/lamp.png"
-            alt=""
-            class="mx-auto lamp w-12 sm:w-16 mb-5 md:w-24 md:mb-10"
-          />
-          <p
-            class="hoursTXT translate-y-[-280%] sm:translate-y-[-335%] md:translate-y-[-395%] font-anton md:text-3xl text-lg"
-          >
-            00
-          </p>
-          <p
-            class="font-anton translate-y-[-100%] text-[#FFC947] md:text-3xl text-lg"
-          >
-            Hours
-          </p>
-        </div>
-        <div class="text-center">
-          <img
-            src="../public/assets/lamp.png"
-            alt=""
-            class="mx-auto lamp w-12 sm:w-16 mb-5 md:w-24 md:mb-10"
-          />
-          <p
-            class="minutesTXT translate-y-[-280%] sm:translate-y-[-335%] md:translate-y-[-395%] font-anton md:text-3xl text-lg"
-          >
-            00
-          </p>
-          <p
-            class="translate-y-[-100%] font-anton text-[#FFC947] md:text-3xl text-lg"
-          >
-            Minutes
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Speakers section -->
-    <section
-      class="flex flex-col items-center gap-y-8 lg:gap-y-12 relative my-32"
-    >
-      <img
-        class="absolute right-0 bottom-0 w-16 lg:w-24"
-        src="./public/assets/1.svg"
-        alt=""
-      />
+    <!-- Partners / Sponsors section -->
+    <section id="sponsors" class="mb-16 flex flex-col gap-y-8 lg:gap-y-12 relative">
+      <img src="./public/assets/hero_bottom_right.svg" class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-24 h-auto  rotate" alt="">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
-        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
-          { Conferences Speakers }
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+          { <span class="typing-demo">&nbsp;Event Sponsors</span> }
         </h3>
         <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
-          Speakers
+          Partners / Sponsors
         </h2>
       </div>
-      <div id="speakers" class="w-4/5 flex justify-between flex-wrap relative">
-        <!---->
+
+      <div class="grid gap-x-8 gap-y-4 grid-cols-1 sm:grid-cols-4 md:grid-cols-3 mx-auto">
+        <!-- <div class="w-60 h-44 sm:col-span-2 md:col-span-1 border border-white">01</div> -->
+        <!-- <div class="w-60 h-44 sm:col-span-2 md:col-span-1">
+          <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1652639162/hackini/RS_-_Green_oaxwrn.svg" alt="Shellmates logo" class="hero-logo w-24 md:w-40 self-center mx-auto" >
+        </div> -->
+        <div class="w-60 h-44 sm:col-span-4 md:col-span-4 self-center">
+          <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1652639162/hackini/RS_-_Green_oaxwrn.svg" alt="Shellmates logo" class="hero-logo w-24 md:w-40 self-center mx-auto" >
+        </div>
+        <!-- <div class="w-60 h-44 sm:col-start-2 sm:col-span-2 md:col-span-1 border border-white">03</div> -->
       </div>
     </section>
+    <!-- End -->
+
+    <!-- Who are we section -->
+    <section id="about" class="py-32 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden">
+      <img src="./public/assets/hero_top_right.svg" class="absolute -right-12 top-6 w-24 sm:w-32 lg:w-40 lg:-right-16 xl:w-56 xl:-right-24 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
+          { Who are we ? }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          Shellmates
+        </h2>
+      </div>
+
+      <div class="grid gap-x-6 gap-y-8 grid-cols-1 md:grid-cols-3 mx-auto">
+        <div class="mx-20 text-center md:text-left md:mx-0 md:w-[34rem] lg:w-[36rem] md:col-span-2">
+          Shellmates club is a collaboration of Algerian dedicated students that are passionate about computer security and computer science. It was founded on December 19th, 2011 and was formerly known as “OWASP Student Chapter Algeria”; since the group was the first representative of OWASP in Algeria. The main goal of the club is to create a community of InfoSec enthusiasts and encourage knowledge sharing in the IT security field.
+        </div>
+        <div class="mx-auto md:mx-0 w-40 sm:w-60 h-44 md:col-span-1 justify-center items-center">
+          <img src="/public/assets/shellmate_logo.png" alt="Shellmates logo" class="hero-logo w-16 md:w-28 self-center mx-auto" >
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+
+    <!-- About the event section -->
+    <section class="py-16 flex flex-col gap-y-8 lg:gap-y-12 relative">
+      <img src="./public/assets/2.svg" class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-20 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
+          { About the event }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          Hack.INI
+        </h2>
+      </div>
+
+      <div class="grid gap-x-6 gap-y-8 grid-cols-1 md:grid-cols-3 mx-auto">
+        <div class="mx-20 text-center md:order-2 md:text-left md:mx-0 md:w-[34rem] lg:w-[36rem] md:col-span-2">
+          Hack.INI is a well known event held by Shellmates club for many years now, it stands for <span class="title-gradient font-bold">Hack Initiation</span>, which means it is made to introduce beginners to the world of cybersecurity and ethical hacking.
+          <br><br>
+          This edition will take almost three consecutive days, there will be plenty of activities that will help you initiate your first steps into the InfoSec field.
+          <br><br>
+          The CTF will be up all along the event period and <span class="title-gradient font-bold">challenge based</span>, i.e. the CTF is separated into small tasks that can be solved individually. We are trying our best to give all participants a delightful experience. The topics covered are somewhere around crypto, web security, reverse engineering and binary exploitation.
+          <br><br>
+          Also, Hack.INI will be hosting workshops on computer security that are firmly related to the CTF competition. Participants can choose between four different workshops covering approximately all fields of cybersecurity.
+        
+        </div>
+        <div class="mx-auto md:order-1 md:mx-0 w-40 sm:w-60 h-44 md:col-span-1 justify-center items-center">
+          <img src="/public/assets/hackini_gradient.png" alt="Shellmates logo" class="hero-logo w-28 md:w-36 self-center mx-auto my-auto" >
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+
+     <!-- CTF section -->
+     <section id="ctf" class="py-32 flex flex-col gap-y-8 lg:gap-y-12 relative">
+      <img src="./public/assets/hero_top_right.svg" class="absolute -left-16 bottom-0 w-24 lg:w-40 lg:-left-20 xl:w-56 xl:-left-24 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
+          { What is a CTF ? }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          CAPTURE THE FLAG
+        </h2>
+      </div>
+
+        <div  class="mx-20 md:mx-40 text-center">
+          Capture the Flag in computer security is generally an exercise or as known as <span class="title-gradient font-bold">a challenge</span>, in which <span class="title-gradient font-bold">flags</span> are secretly hidden in purposefully-vulnerable programs or websites, to reach the maximum points and be ranked the highest on the scoreboard.
+          <br><br>
+          On the other hand, A CTF competition is a set of challenges of different categories. The teams will work together to try and solve as many challenges as they can against time. Each captured flag gains them a number of points.
+          <br><br>
+          Competitors steal flags either from other competitors or in our case from the organisers, Hack.Ini will present several variations, including misc, forensics and pwn. . .
+        </div>
+    </section>
+    <!-- End -->
+
+    <!-- Venue Section -->
+
+    <section id="venue" class="my-32 flex flex-col gap-y-8 lg:gap-y-12 relative">
+      <img src="./public/assets/hero_bottom_right.svg" class="absolute -left-16 bottom-0 w-24 lg:w-40 lg:-left-20 xl:w-56 xl:-left-28 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
+          { Get Direction }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          EVENT VENUE
+        </h2>
+      </div>
+
+      <div class="w-[80%] mx-auto leading-loose">
+        <!-- Two columns -->
+        <div class=" flex flex-wrap md:flex-nowrap mb-6 gap-1 p-0 md:text-3xl md:leading-10 text-xl leading-6">
+            <div class="z-0 overflow-hidden relative h-[80vw] w-[100%] md:h-auto md:w-1/2 bg-gray-400">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.729818871565!2d3.1717269148095455!3d36.70502987996815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e522f3f317461%3A0x215c157a5406653c!2sEcole%20Nationale%20Sup%C3%A9rieure%20d&#39;Informatique!5e0!3m2!1sfr!2sdz!4v1647876037850!5m2!1sfr!2sdz" class="left-0 top-0 h-[100%] w-[100%] absolute" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="md:w-1/2 py-8 md:px-8 flex flex-col justify-center">
+                <p class="pb-5 font-bold text-1xl mb-4 sm:text-2xl sm:mb-6 md:text-3xl md:mb-8">
+                  École nationale supérieure d'informatique, Algiers
+                </p>
+                <p class="text-white font-light text-md sm:text-lg md:text-xl lg:text-2xl">
+                  Formerly the National Institute for Computer Training (INI), is an Algerian higher education institution training state engineers in computer science. It is located in Oued Smar, about 15 km from the city center of the capital Algiers, in Algeria.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Three columns -->
+        <div class="flex md:flex-nowrap flex-wrap my-4 gap-2 md:text-3xl md:leading-10 text-xl leading-6">
+            <div class="w-[100%] md:w-1/4 venue-img">
+              <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266965/bsides_site/venue-gallery/1_gppl7a.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266965/bsides_site/venue-gallery/1_gppl7a.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="w-[100%] md:w-1/4 venue-img">
+              <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266956/bsides_site/venue-gallery/2_zpcjni.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266956/bsides_site/venue-gallery/2_zpcjni.jpg" alt="" >
+              </a>
+            </div>
+
+            <div class="w-[100%] md:w-1/4 venue-img">
+              <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266965/bsides_site/venue-gallery/3_hxgrs4.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266965/bsides_site/venue-gallery/3_hxgrs4.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="w-[100%] md:w-1/4 venue-img">
+              <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266975/bsides_site/venue-gallery/4_votarv.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266975/bsides_site/venue-gallery/4_votarv.jpg" alt="" >
+              </a>
+            </div>
+        </div>
+
+        <!-- Three columns -->
+        <div class="flex md:flex-nowrap flex-wrap my-4 gap-2 md:text-3xl md:leading-10 text-xl leading-6">
+          <div class="w-[100%] md:w-1/4 venue-img">
+            <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266948/bsides_site/venue-gallery/5_byhiqs.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266948/bsides_site/venue-gallery/5_byhiqs.jpg" alt="" >
+            </a>
+          </div>
+
+          <div class="w-[100%] md:w-1/4 venue-img">
+            <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266993/bsides_site/venue-gallery/11_eso4xw.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266993/bsides_site/venue-gallery/11_eso4xw.jpg" alt="" >
+            </a>
+          </div>
+
+          <div class="w-[100%] md:w-1/4 venue-img">
+            <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266985/bsides_site/venue-gallery/7_ollkur.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266985/bsides_site/venue-gallery/7_ollkur.jpg" alt="">
+            </a>
+          </div>
+
+          <div class="w-[100%] md:w-1/4 venue-img">
+            <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266969/bsides_site/venue-gallery/9_sjk9sr.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266969/bsides_site/venue-gallery/9_sjk9sr.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+      </div>
+
+    </div>
+    </section>
+    <!-- End -->
+
+
+    <!-- Content section -->
+    
+    <!-- End -->
+
+    <!-- Speakers section -->
+
     <!-- End -->
 
     <!-- Gallery section -->
-    <section class="my-32 flex flex-col gap-y-8 lg:gap-y-12">
-      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4">
-        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
-          { Photos from previous editions }
-        </h3>
-        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
-          Gallery
-        </h2>
-      </div>
-      <div class="slider">
-        <div id="gallery" class="slide-track">
-          <!---->
-        </div>
-      </div>
-    </section>
+
     <!-- End -->
       
     <!-- Agenda section -->
-    <section class="my-32 flex flex-col gap-y-8 lg:gap-y-12 relative">
-      <img src="/public/assets/2.svg" class="absolute left-0 bottom-0 lg:w-24 xl:w-32 h-auto hidden lg:block" alt="">
-      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
-        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
-          { Event timeline }
-        </h3>
-        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
-          Agenda
-        </h2>
-      </div>
-      <div id="agenda" class="flex flex-col w-4/5 xl:w-3/5 mx-auto gap-y-8 relative">
-        <!---->
-      </div>
-    </section>
+
     <!-- End -->
 
     <!-- Reviews section -->
-    <section class="my-32 flex flex-col gap-y-8 lg:gap-y-12">
+
+    <!-- End -->
+
+    <!-- FAQ Sectipn -->
+
+    <section id="faq" class="my-32 flex flex-col gap-y-8 lg:gap-y-12">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
-          { What participants say about HackINI }
+          { Frequently Asked Questions }
         </h3>
         <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
-          Reviews
+          FAQ
         </h2>
       </div>
-      <div id="reviews" class="w-4/5 mx-auto flex justify-between flex-wrap relative">
-        <!---->
-      </div>
+      <dl class="mt-8 mx-auto max-w-screen-sm md:max-w-screen-md lg:max-w-screen-xl flex flex-col lg:flex-row lg:flex-wrap">
+        <div class="lg:w-full">
+            <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
+                <dt class="question">
+                    <div class="flex justify-between">
+                        <div class="text-white font-normal text-xl lg:text-2xl">
+                          When does the CTF competition start?
+                        </div>
+                        <div>
+                            <svg fill=currentColor class="question-chevron h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                            <svg fill=currentColor class="question-chevron hidden h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </dt>
+                <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
+                  Thursday 26th May 2022 at 05 pm.
+                </dd>
+            </div>
+        </div>
+          <div class="lg:w-full">
+            <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
+                <dt class="question">
+                    <div class="flex justify-between">
+                        <div class="text-white font-normal text-xl lg:text-2xl">
+                          How about the snacks?
+                        </div>
+                        <div>
+                            <svg fill=currentColor class="question-chevron h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                            <svg fill=currentColor class="question-chevron hidden h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </dt>
+                <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
+                  Thanks to our sponsors, <span class="title-gradient">Shellmates</span> will provide two dinners, two breakfasts and one lunch for the whole event.
+                </dd>
+            </div>
+        </div>
+          <div class="lg:w-full">
+            <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
+                <dt class="question">
+                    <div class="flex justify-between">
+                        <div class="text-white font-normal text-xl lg:text-2xl">
+                          Who can participate?
+                        </div>
+                        <div>
+                            <svg fill=currentColor class="question-chevron h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                            <svg fill=currentColor class="question-chevron hidden h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </dt>
+                <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
+                  Are you a fan of cybersecurity or a professional in this field? or perhaps you are passionate about hacking or you are simply curious? Then <span class="title-gradient">Hack.INI 2022</span> is the opportunity not to miss to satisfy your curiosity, learn and also meet other people addicted to computer security.
+                </dd>
+            </div>
+        </div>
+          <div class="lg:w-full">
+            <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
+                <dt class="question">
+                    <div class="flex justify-between">
+                        <div class="text-white font-normal text-xl lg:text-2xl">
+                          What other activities do we have aside from the CTF competition?
+                        </div>
+                        <div>
+                            <svg fill=currentColor class="question-chevron h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                            <svg fill=currentColor class="question-chevron hidden h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </dt>
+                <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
+                  There will be non-mandatory workshops about cyber security fields that will help you get along with the challenges!
+                </dd>
+            </div>
+        </div>
+          <div class="lg:w-full">
+            <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
+                <dt class="question">
+                    <div class="flex justify-between">
+                        <div class="text-white font-normal text-xl lg:text-2xl">
+                          How can I register?
+                        </div>
+                        <div>
+                            <svg fill=currentColor class="question-chevron h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                            <svg fill=currentColor class="question-chevron hidden h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </dt>
+                <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
+                  Check the link in the home section, you may need to know that you can register either only for the CTF competition, or workshops or both!
+                </dd>
+            </div>
+        </div>
+          <div class="lg:w-full">
+            <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
+                <dt class="question">
+                    <div class="flex justify-between">
+                        <div class="text-white font-normal text-xl lg:text-2xl">
+                          Do I have to confirm my attendance?
+                        </div>
+                        <div>
+                            <svg fill=currentColor class="question-chevron h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                            <svg fill=currentColor class="question-chevron hidden h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </dt>
+                <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
+                  You might risk your place if you don’t!
+                </dd>
+            </div>
+        </div>
+          <div class="lg:w-full">
+            <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
+                <dt class="question">
+                    <div class="flex justify-between">
+                        <div class="text-white font-normal text-xl lg:text-2xl">
+                          How many members on a team? 
+                        </div>
+                        <div>
+                            <svg fill=currentColor class="question-chevron h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                            <svg fill=currentColor class="question-chevron hidden h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </dt>
+                <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
+                  5 members per team.
+                </dd>
+            </div>
+        </div>
+          <div class="lg:w-full">
+            <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
+                <dt class="question">
+                    <div class="flex justify-between">
+                        <div class="text-white font-normal text-xl lg:text-2xl">
+                          What if I don’t have a team? 
+                        </div>
+                        <div>
+                            <svg fill=currentColor class="question-chevron h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                            <svg fill=currentColor class="question-chevron hidden h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                <g>
+                                <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </dt>
+                <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
+                  Individuals can join teams with missing numbers.
+                </dd>
+            </div>
+        </div>
+         <div class="lg:w-full">
+             <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
+                 <dt class="question">
+                     <div class="flex justify-between">
+                         <div class="text-white font-normal text-xl lg:text-2xl">
+                          How to reach us?
+                         </div>
+                         <div>
+                             <svg fill=currentColor class="question-chevron  h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                 <g>
+                                 <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                 </g>
+                                 </g>
+                             </svg>
+                             <svg fill=currentColor class="question-chevron hidden  h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                 <g>
+                                 <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                 </g>
+                                 </g>
+                             </svg>
+                         </div>
+                     </div>
+                 </dt>
+                 <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
+                  If you have any further questions email us at <br><br>
+                  <a href="mailto:shellmates@esi.dz" class="title-gradient hover:underline">shellmates@esi.dz</a> <br><br>
+                  Or track us on our <br><br>
+                  <a href="#footer" class="title-gradient hover:underline">Social Media Accounts</a>
+                 </dd>
+             </div>
+         </div>
+
+     </dl>
     </section>
-    <!-- End -->
+<script
+src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+crossorigin="anonymous"></script>
+<script>
+$('.question-and-answer').click(function() {
+    $(this).find(".answer").toggleClass("hidden")
+    $(this).find(".question-chevron").toggleClass("hidden")
+})
+</script>
 
     <script src="/scripts/speakers.js"></script>
     <script src="/scripts/gallery.js"></script>
