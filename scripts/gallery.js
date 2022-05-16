@@ -1,14 +1,14 @@
 pictures = [
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png"
+    "https://res.cloudinary.com/shellmates-club/image/upload/v1641238403/bsides_site/gallery/IMG_20211109_171827_avn9cm.jpg",
+    "https://res.cloudinary.com/shellmates-club/image/upload/v1641238202/bsides_site/gallery/IMG_5511_o5hdqb.jpg",
+    "https://res.cloudinary.com/shellmates-club/image/upload/v1641160562/bsides_site/gallery/res-console.cloudinary_qdc7nk.jpg",
+    "https://res.cloudinary.com/shellmates-club/image/upload/v1606914655/bsides_site/gallery/1_nzrxaa.jpg",
+    "https://res.cloudinary.com/shellmates-club/image/upload/v1606914663/bsides_site/gallery/8_wwgcxb.jpg",
+    "https://res.cloudinary.com/shellmates-club/image/upload/v1641238271/bsides_site/gallery/IMG_20210703_165444_lp9upj.jpg",
+    "https://res.cloudinary.com/shellmates-club/image/upload/v1641238403/bsides_site/gallery/IMG_20211109_171827_avn9cm.jpg",
+    "https://res.cloudinary.com/shellmates-club/image/upload/v1641238202/bsides_site/gallery/IMG_5511_o5hdqb.jpg",
+    "https://res.cloudinary.com/shellmates-club/image/upload/v1641160562/bsides_site/gallery/res-console.cloudinary_qdc7nk.jpg",
+    "https://res.cloudinary.com/shellmates-club/image/upload/v1606914655/bsides_site/gallery/1_nzrxaa.jpg",
 ]
 
 const gallery = document.getElementById("gallery")
