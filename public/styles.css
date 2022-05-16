@@ -1540,12 +1540,19 @@ footer {
   place-items: center;
 }
 
-/* .typing-demo {
+.typing-demo {
   width: 12.5ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  -webkit-animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+          animation: typing 2s steps(22), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0
+  }
 }
 
 @keyframes typing {
@@ -1554,11 +1561,17 @@ footer {
   }
 }
 
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
 @keyframes blink {
   50% {
     border-color: transparent
   }
-} */
+}
 
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
