@@ -1128,6 +1128,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+
 body,
 footer {
   font-family: 'Gilroy-Regular', sans-serif;

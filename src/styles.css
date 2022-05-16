@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+
 body,
 footer {
   font-family: 'Gilroy-Regular', sans-serif;
