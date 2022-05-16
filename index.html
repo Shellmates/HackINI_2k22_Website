@@ -54,6 +54,7 @@
 
     <title>Hack.INI Website</title>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="../public/styles.css" rel="stylesheet" />
     <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
     <script
@@ -62,7 +63,7 @@
     ></script>
   </head>
 
-  <body class="text-white">
+  <body class="text-white overflow-x-hidden">
     
     <!-- Navbar Section -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -115,7 +116,8 @@
 
     <!-- Hero Section -->
 
-    <section id="hero" class="flex flex-col pb-40 text-center gap-y-8 relative overflow-hidden">
+    <section id="hero" class="flex flex-col pb-40 text-center gap-y-8 relative overflow-hidden" data-aos="fade-up"
+    data-aos-duration="3000">
 
       <img src="./public/assets/hero_top_right.svg" class="absolute -top-10 -right-10 w-32 sm:w-44 lg:-top-16 lg:w-48 lg:-right-12 xl:w-56 xl:-right-16 h-auto  rotate" alt="">
 
@@ -205,7 +207,9 @@
     </script>
 
     <!-- Partners / Sponsors section -->
-    <section id="sponsors" class="mb-16 flex flex-col gap-y-8 lg:gap-y-12 relative">
+    <section id="sponsors" class="mb-16 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-sine">
       <img src="./public/assets/hero_bottom_right.svg" class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-24 h-auto  rotate" alt="">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
@@ -230,7 +234,9 @@
     <!-- End -->
 
     <!-- Who are we section -->
-    <section id="about" class="py-32 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden">
+    <section id="about" class="py-32 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden" data-aos="fade-right"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-sine">
       <img src="./public/assets/hero_top_right.svg" class="absolute -right-12 top-6 w-24 sm:w-32 lg:w-40 lg:-right-16 xl:w-56 xl:-right-24 h-auto  rotate" alt="">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
@@ -253,7 +259,9 @@
     <!-- End -->
 
     <!-- About the event section -->
-    <section class="py-16 flex flex-col gap-y-8 lg:gap-y-12 relative">
+    <section class="py-16 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-left"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-sine">
       <img src="./public/assets/2.svg" class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-20 h-auto  rotate" alt="">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
@@ -283,7 +291,9 @@
     <!-- End -->
 
      <!-- CTF section -->
-     <section id="ctf" class="py-32 flex flex-col gap-y-8 lg:gap-y-12 relative">
+     <section id="ctf" class="py-32 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-up"
+     data-aos-duration="1000"
+     data-aos-easing="ease-in-sine">
       <img src="./public/assets/hero_top_right.svg" class="absolute -left-16 bottom-0 w-24 lg:w-40 lg:-left-20 xl:w-56 xl:-left-24 h-auto  rotate" alt="">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
@@ -305,7 +315,9 @@
     <!-- End -->
 
     <!-- Why participating section -->
-  <section id="whyparticipating" class="mb-32 py-32 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden">
+  <section id="whyparticipating" class="mb-32 py-32 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden" data-aos="fade-up"
+  data-aos-duration="500"
+  data-aos-easing="ease-in-sine">
     <img src="./public/assets/hero_top_left.svg" class="absolute -right-16 bottom-0 w-24 lg:w-40 lg:-right-20 xl:w-56 xl:-right-24 h-auto  rotate" alt="">
     <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
       <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
@@ -318,7 +330,11 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center text-[#000] px-8 sm:px-40 md:px-12 xl:px-20">
 
-      <div class="relative flex flex-col items-center justify-left bg-[#5CE593] rounded-3xl p-6 md:py-10 md:px-8 mx-12 my-12 lg:my-auto" >
+      <div class="relative flex flex-col items-center justify-left bg-[#5CE593] rounded-3xl p-6 md:py-10 md:px-8 mx-12 my-12 lg:my-auto" 
+      data-aos="fade-up"
+      data-aos-offset="100"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine">
             <div class="relative w-full flex items-center justify-end  mb-3">
                 <h2 class="right-3 text-5xl opacity-30 text-[#000] font-bold w-fit   ">01</h2>
             </div>
@@ -333,7 +349,12 @@
         </div>
      </div>
 
-     <div class="text-[#fff] relative  flex flex-col items-center justify-left bg-[#2C2C33] rounded-3xl p-6 md:py-10 md:px-8 mx-12 my-12 lg:my-auto" >
+     <div class="text-[#fff] relative  flex flex-col items-center justify-left bg-[#2C2C33] rounded-3xl p-6 md:py-10 md:px-8 mx-12 my-12 lg:my-auto" 
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
+      >
          <div class="absolute -left-1 ">
          <img src="./public/assets/brightLine.png" alt="" class="shadow-lg shadow-[#5CE593]">
         </div>
@@ -353,7 +374,12 @@
 
   </div>
 
-    <div class="shadow-card relative text-[#fff]  flex flex-col items-center justify-left bg-[#2C2C33] rounded-3xl p-6 md:py-10 md:px-8 mx-12 my-12 lg:my-auto" >
+    <div class="shadow-card relative text-[#fff]  flex flex-col items-center justify-left bg-[#2C2C33] rounded-3xl p-6 md:py-10 md:px-8 mx-12 my-12 lg:my-auto" 
+    data-aos="fade-up"
+      data-aos-offset="300"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
+    >
     <div class="absolute -left-1 shadow-lg shadow-[#5CE593] ">
         <img src="./public/assets/brightLine.png" alt="" class="shadow-lg shadow-[#5CE593]">
       </div>
@@ -393,7 +419,10 @@
     <!-- End -->
 
     <!-- Gallery section -->
-    <section id="ngallery" class="my-32 flex flex-col gap-y-8 lg:gap-y-12">
+    <section id="ngallery" class="my-32 flex flex-col gap-y-8 lg:gap-y-12"
+      data-aos="fade-up"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-sine">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
           { Photos from previous editions }
@@ -402,7 +431,11 @@
           Gallery
         </h2>
       </div>
-      <div class="slider">
+      <div class="slider" 
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine">
         <div id="gallery" class="slide-track">
           <!---->
         </div>
@@ -421,7 +454,10 @@
     <!-- FAQ Sectipn -->
 
     <section id="faq" class="my-32 flex flex-col gap-y-8 lg:gap-y-12">
-      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4" 
+      data-aos="fade-up"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-sine">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight">
           { Frequently Asked Questions }
         </h3>
@@ -430,7 +466,12 @@
         </h2>
       </div>
       <dl class="mt-8 mx-auto max-w-screen-sm md:max-w-screen-md lg:max-w-screen-xl flex flex-col lg:flex-row lg:flex-wrap">
-        <div class="lg:w-full">
+        <div class="lg:w-full"
+        data-aos="fade-up"
+        data-aos-offset="100"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine"
+        >
           <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
               <dt class="question">
                   <div class="flex justify-between">
@@ -460,7 +501,12 @@
               </dd>
           </div>
       </div>
-      <div class="lg:w-full">
+      <div class="lg:w-full"
+      data-aos="fade-up"
+      data-aos-offset="130"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
+      >
         <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
             <dt class="question">
                 <div class="flex justify-between">
@@ -490,37 +536,45 @@
             </dd>
         </div>
     </div>
-    <div class="lg:w-full">
-      <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
-          <dt class="question">
-              <div class="flex justify-between">
-                  <div class="text-white font-normal text-xl lg:text-2xl">
-                    How can I register?
+        <div class="lg:w-full"
+        data-aos="fade-up"
+        data-aos-offset="170"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine">
+          <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
+              <dt class="question">
+                  <div class="flex justify-between">
+                      <div class="text-white font-normal text-xl lg:text-2xl">
+                        How can I register?
+                      </div>
+                      <div>
+                          <svg fill=currentColor class="question-chevron h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                              <g>
+                              <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                              </g>
+                              </g>
+                          </svg>
+                          <svg fill=currentColor class="question-chevron hidden h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                              <g>
+                              <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                              </g>
+                              </g>
+                          </svg>
+                      </div>
                   </div>
-                  <div>
-                      <svg fill=currentColor class="question-chevron h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
-                          <g>
-                          <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
-                          </g>
-                          </g>
-                      </svg>
-                      <svg fill=currentColor class="question-chevron hidden h-7 block text-white  rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
-                          <g>
-                          <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
-                          </g>
-                          </g>
-                      </svg>
-                  </div>
-              </div>
-          </dt>
-          <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
-            Check the link in the home section, you may need to know that you can register either only for the CTF competition, or workshops or both!
-          </dd>
+              </dt>
+              <dd class="answer hidden mt-10 leading-snug text-md lg:text-xl text-white">
+                Check the link in the home section, you may need to know that you can register either only for the CTF competition, or workshops or both!
+              </dd>
+          </div>
       </div>
-  </div>
-          <div class="lg:w-full">
+          <div class="lg:w-full"
+          data-aos="fade-up"
+          data-aos-offset="210"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-sine">
             <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
                 <dt class="question">
                     <div class="flex justify-between">
@@ -553,7 +607,11 @@
          
           
           
-          <div class="lg:w-full">
+          <div class="lg:w-full"
+          data-aos="fade-up"
+          data-aos-offset="250"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-sine">
             <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
                 <dt class="question">
                     <div class="flex justify-between">
@@ -583,7 +641,11 @@
                 </dd>
             </div>
         </div>
-          <div class="lg:w-full">
+          <div class="lg:w-full"
+          data-aos="fade-up"
+          data-aos-offset="290"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-sine">
             <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
                 <dt class="question">
                     <div class="flex justify-between">
@@ -613,7 +675,11 @@
                 </dd>
             </div>
         </div>
-        <div class="lg:w-full">
+        <div class="lg:w-full"
+        data-aos="fade-up"
+        data-aos-offset="320"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine">
           <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
               <dt class="question">
                   <div class="flex justify-between">
@@ -643,7 +709,11 @@
               </dd>
           </div>
       </div>
-          <div class="lg:w-full">
+          <div class="lg:w-full"
+          data-aos="fade-up"
+          data-aos-offset="350"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-sine">
             <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
                 <dt class="question">
                     <div class="flex justify-between">
@@ -673,7 +743,11 @@
                 </dd>
             </div>
         </div>
-         <div class="lg:w-full">
+         <div class="lg:w-full"
+         data-aos="fade-up"
+         data-aos-offset="370"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-sine">
              <div class="question-and-answer select-none cursor-pointer border-b mx-8 lg:mx-24 my-3 pr-6 py-4 text-sm group">
                  <dt class="question">
                      <div class="flex justify-between">
@@ -769,6 +843,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <!-- End of Previous editions section -->
     <!-- <script src="/scripts/contactform.js"></script> -->

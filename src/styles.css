@@ -203,7 +203,7 @@ footer {
 
 /* Rotation */
 .rotate {
-  animation: rotation 4s infinite linear;
+  animation: rotation 8s infinite linear;
 }
 
 @keyframes rotation {

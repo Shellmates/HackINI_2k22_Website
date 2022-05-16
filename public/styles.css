@@ -990,6 +990,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: hidden;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -1503,8 +1507,8 @@ footer {
 /* Rotation */
 
 .rotate {
-  -webkit-animation: rotation 4s infinite linear;
-          animation: rotation 4s infinite linear;
+  -webkit-animation: rotation 8s infinite linear;
+          animation: rotation 8s infinite linear;
 }
 
 @-webkit-keyframes rotation {
