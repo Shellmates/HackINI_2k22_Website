@@ -190,6 +190,15 @@ footer {
 }
 /* Agenda styles end */
 
+/* Cards Styles */
+.shadow-card {
+  box-shadow: 20px 20px 0px #5CE593;
+
+}
+
+
+/* Card Styles end */
+
 /* Animation */
 
 /* Rotation */
