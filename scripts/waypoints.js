@@ -97,4 +97,53 @@ $(document).ready(function() {
     
     }, { offset: '85%' });
 
+    $('.typing-demo-8').waypoint(function() {
+    
+    $('.typing-demo-8').css({
+    
+    animation: "typing 2s steps(22), blink .5s step-end infinite alternate",
+    
+    opacity: "1"
+    
+    });
+    
+    }, { offset: '85%' });
+
+    $('.typing-demo-9').waypoint(function() {
+    
+    $('.typing-demo-9').css({
+    
+    animation: "typing 2s steps(22), blink .5s step-end infinite alternate",
+    
+    opacity: "1"
+    
+    });
+    
+    }, { offset: '85%' });
+
+    $('.typing-demo-10').waypoint(function() {
+    
+    $('.typing-demo-10').css({
+    
+    animation: "typing 2s steps(22), blink .5s step-end infinite alternate",
+    
+    opacity: "1"
+    
+    });
+    
+    }, { offset: '85%' });
+
+    $('.typing-demo-11').waypoint(function() {
+    
+    $('.typing-demo-11').css({
+    
+    animation: "typing 2s steps(22), blink .5s step-end infinite alternate",
+    
+    opacity: "1"
+    
+    });
+    
+    }, { offset: '85%' });
+
+
 });

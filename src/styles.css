@@ -169,7 +169,7 @@ footer {
   transform: rotate(45deg) translate(-9px, -8px);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .hamburger {
     display: none;
   }
@@ -344,6 +344,34 @@ footer {
 
 .typing-demo-7 {
   width: 22ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-8 {
+  width: 11ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-9 {
+  width: 11ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-10 {
+  width: 20ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.typing-demo-11 {
+  width: 13ch;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;

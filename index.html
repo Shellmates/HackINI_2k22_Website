@@ -68,25 +68,25 @@
     <!-- Navbar Section -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <div class="w-full text-white md:bg-transparent dark-mode:text-gray-200 dark-mode:bg-gray-800 z-50 fixed navbar-fixed-top">
-      <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+      <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row md:px-6 lg:px-8">
         <div class="p-4 flex flex-row items-center justify-end">
-          <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open" onclick="addBg()">
+          <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open" onclick="addBg()">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
               <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
               <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
             </svg>
           </button>
         </div>
-        <nav :class="{'flex': open, 'hidden': !open}" class="navbar flex-col flex-grow p-4 hidden md:flex md:justify-center md:flex-row">
-          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text  focus:outline-none focus:shadow-outline" href="#hero">Home</a>
-          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#sponsors">Sponsors</a>
-          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#about">About</a>
-          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#ngallery">Gallery</a>
-          <!-- <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#venue">Venue</a> -->
-          <!-- <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#nagenda">Agenda</a> -->
-          <!-- <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#nspeakers">Speakers</a> -->
-          <!-- <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#ngallery">Gallery</a> -->
-          <a class="px-6 py-2 mt-2 text-lg font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#faq">FAQ</a>
+        <nav :class="{'flex': open, 'hidden': !open}" class="navbar flex-col flex-grow p-4 hidden lg:flex lg:justify-center lg:flex-row">
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text  focus:outline-none focus:shadow-outline" href="#hero">Home</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#sponsors">Sponsors</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#about">About</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#ngallery">Gallery</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#venue">Venue</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#nagenda">Agenda</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#nspeakers">Speakers</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#ngallery">Gallery</a>
+          <a class="px-6 py-2 mt-2 text-md font-gilroy-regular bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gradient-to-br hover:from-[#74e250] hover:to-[#24ecca] hover:text-transparent hover:bg-clip-text focus:from-[#74e250] focus:to-[#24ecca] focus:text-transparent focus:bg-clip-text focus:outline-none focus:shadow-outline" href="#faq">FAQ</a>
         </nav>
       </div>
     </div>
@@ -118,15 +118,15 @@
     <!-- Hero Section -->
 
     <section id="hero" class="flex flex-col pb-40 text-center gap-y-8 relative overflow-hidden" data-aos="fade-up"
-    data-aos-duration="3000">
+    data-aos-duration="2000">
 
-      <img src="./public/assets/hero_top_right.svg" class="absolute -top-10 -right-10 w-32 sm:w-44 lg:-top-16 lg:w-48 lg:-right-12 xl:w-56 xl:-right-16 h-auto  rotate" alt="">
+      <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422479/hackini/assets/hero_top_right_mkud7e.svg" class="absolute -top-10 -right-10 w-32 sm:w-44 lg:-top-16 lg:w-48 lg:-right-12 xl:w-56 xl:-right-16 h-auto  rotate" alt="">
 
-      <img src="./public/assets/hero_bottom_right.svg" class="absolute bottom-0 -right-10 w-32 sm:w-44 lg:w-48 lg:-right-12 xl:w-56 xl:-right-16 h-auto  rotate" alt="">
+      <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422478/hackini/assets/hero_bottom_right_armqbz.svg" class="absolute bottom-0 -right-10 w-32 sm:w-44 lg:w-48 lg:-right-12 xl:w-56 xl:-right-16 h-auto  rotate" alt="">
 
-      <img src="./public/assets/hero_top_left.svg" class="absolute -top-12 -left-10 w-32 sm:w-44 lg:-top-16 lg:w-48 lg:-left-12 xl:w-56 xl:-left-16 h-auto  rotate" alt="">
+      <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422479/hackini/assets/hero_top_left_ssmri5.svg" class="absolute -top-12 -left-10 w-32 sm:w-44 lg:-top-16 lg:w-48 lg:-left-12 xl:w-56 xl:-left-16 h-auto  rotate" alt="">
 
-      <img src="/public/assets/shellmate_logo.png" alt="Shellmates logo" class="hero-logo w-8 mt-16 md:mt-20 md:w-14 self-center" >
+      <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422511/hackini/assets/shellmate_logo_yb49aj.png" alt="Shellmates logo" class="hero-logo w-8 mt-16 md:mt-20 md:w-14 self-center" >
       <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper text-center">
         <h1 class="title-gradient font-gilroy-heavy text-3xl md:text-6xl typing-demo-event text-center mx-auto">The Annual Hack.INI Event</h1>
       </h3>
@@ -134,13 +134,13 @@
       <div class="grid grid-cols-1 md:grid-cols-1 gap-y-6 gap-x-12 mx-auto">
         <!-- md:grid-cols-2 -->
         <div class="inline-flex items-center">
-          <img src="/public/assets/schedule.svg" alt="schedule">
+          <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422479/hackini/assets/schedule_bom3ob.svg" alt="schedule">
           <p class="text-xl text-white ml-4">May 26th-28th, 2022.</p>
         </div>
-        <!-- <div class="inline-flex items-center">
-          <img src="/public/assets/localisation.svg" alt="localisation" class="inline">
+        <div class="inline-flex items-center">
+          <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422480/hackini/assets/localisation_pqybmj.svg" alt="localisation" class="inline">
           <p class="text-xl text-white ml-4">ESI, Oued Smar, Algiers.</p>
-        </div> -->
+        </div>
       </div>
       <p class="text-white text-2xl md:text-3xl font-gilroy-medium capitalize">Starting in :</p>
       <!-- Countdown -->
@@ -217,7 +217,7 @@
     <section id="sponsors" class="mb-16 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-up"
     data-aos-duration="1000"
     data-aos-easing="ease-in-sine">
-      <img src="./public/assets/hero_bottom_right.svg" class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-24 h-auto  rotate" alt="">
+      <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422478/hackini/assets/hero_bottom_right_armqbz.svg" class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-24 h-auto  rotate" alt="">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
           { <span class="typing-demo-1">&nbsp;Event Sponsors</span> }
@@ -244,7 +244,7 @@
     <section id="about" class="py-32 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden" data-aos="fade-right"
     data-aos-duration="1000"
     data-aos-easing="ease-in-sine">
-      <img src="./public/assets/hero_top_right.svg" class="absolute -right-12 top-6 w-24 sm:w-32 lg:w-40 lg:-right-16 xl:w-56 xl:-right-24 h-auto  rotate" alt="">
+      <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422479/hackini/assets/hero_top_right_mkud7e.svg" class="absolute -right-12 top-6 w-24 sm:w-32 lg:w-40 lg:-right-16 xl:w-56 xl:-right-24 h-auto  rotate" alt="">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
           { <span class="typing-demo-2">&nbsp;Who are we?</span> }
@@ -259,7 +259,7 @@
           Shellmates club is a collaboration of Algerian dedicated students that are passionate about computer security and computer science. It was founded on December 19th, 2011 and was formerly known as “OWASP Student Chapter Algeria”; since the group was the first representative of OWASP in Algeria. The main goal of the club is to create a community of InfoSec enthusiasts and encourage knowledge sharing in the IT security field.
         </div>
         <div class="mx-auto md:mx-0 w-40 sm:w-60 h-44 md:col-span-1 justify-center items-center">
-          <img src="/public/assets/shellmate_logo.png" alt="Shellmates logo" class="hero-logo w-16 md:w-28 self-center mx-auto" >
+          <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422511/hackini/assets/shellmate_logo_yb49aj.png" alt="Shellmates logo" class="hero-logo w-16 md:w-28 self-center mx-auto" >
         </div>
       </div>
     </section>
@@ -269,7 +269,7 @@
     <section class="py-16 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-left"
     data-aos-duration="1000"
     data-aos-easing="ease-in-sine">
-      <img src="./public/assets/2.svg" class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-20 h-auto  rotate" alt="">
+      <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422477/hackini/assets/2_cpkgnn.svg" class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-20 h-auto  rotate" alt="">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
           { <span class="typing-demo-3">&nbsp;About the event</span> }
@@ -291,7 +291,7 @@
         
         </div>
         <div class="mx-auto md:order-1 md:mx-0 w-40 sm:w-60 h-44 md:col-span-1 justify-center items-center">
-          <img src="/public/assets/hackini_gradient.png" alt="Shellmates logo" class="hero-logo w-28 md:w-36 self-center mx-auto my-auto" >
+          <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422483/hackini/assets/hackini_gradient_xpyorg.png" alt="Shellmates logo" class="hero-logo w-28 md:w-36 self-center mx-auto my-auto" >
         </div>
       </div>
     </section>
@@ -301,7 +301,7 @@
      <section id="ctf" class="py-32 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-up"
      data-aos-duration="1000"
      data-aos-easing="ease-in-sine">
-      <img src="./public/assets/hero_top_right.svg" class="absolute -left-16 bottom-0 w-24 lg:w-40 lg:-left-20 xl:w-56 xl:-left-24 h-auto  rotate" alt="">
+      <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422479/hackini/assets/hero_top_right_mkud7e.svg" class="absolute -left-16 bottom-0 w-24 lg:w-40 lg:-left-20 xl:w-56 xl:-left-24 h-auto  rotate" alt="">
       <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
         <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
           { <span class="typing-demo-4">&nbsp;What is a CTF?</span> }
@@ -325,7 +325,7 @@
   <section id="whyparticipating" class="mb-32 py-32 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden" data-aos="fade-up"
   data-aos-duration="500"
   data-aos-easing="ease-in-sine">
-    <img src="./public/assets/hero_top_left.svg" class="absolute -right-16 bottom-0 w-24 lg:w-40 lg:-right-20 xl:w-56 xl:-right-24 h-auto  rotate" alt="">
+    <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422479/hackini/assets/hero_top_left_ssmri5.svg" class="absolute -right-16 bottom-0 w-24 lg:w-40 lg:-right-20 xl:w-56 xl:-right-24 h-auto  rotate" alt="">
     <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
       <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
         { <span class="typing-demo-5">&nbsp;Reasons to participate in Hack.INI</span> }
@@ -363,7 +363,7 @@
       data-aos-easing="ease-in-sine"
       >
          <div class="absolute -left-1 ">
-         <img src="./public/assets/brightLine.png" alt="" class="shadow-lg shadow-[#5CE593]">
+         <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422477/hackini/assets/brightLine_gzviov.png" alt="" class="shadow-lg shadow-[#5CE593]">
         </div>
         <div class="relative w-full flex items-center justify-end  mb-3">
             <h2 class="right-3 text-5xl opacity-30 text-[#fff] font-bold w-fit   ">02</h2>
@@ -388,7 +388,7 @@
       data-aos-easing="ease-in-sine"
     >
     <div class="absolute -left-1 shadow-lg shadow-[#5CE593] ">
-        <img src="./public/assets/brightLine.png" alt="" class="shadow-lg shadow-[#5CE593]">
+        <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422477/hackini/assets/brightLine_gzviov.png" alt="" class="shadow-lg shadow-[#5CE593]">
       </div>
     <div class="relative w-full flex items-center justify-end  mb-3">
         <h2 class="right-3 text-5xl opacity-30 text-[#fff] font-bold w-fit   ">03</h2>
@@ -414,19 +414,226 @@
 
     <!-- Venue Section -->
 
+    <section id="venue" class="my-32 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+      <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422478/hackini/assets/hero_bottom_right_armqbz.svg" class="absolute -left-16 bottom-0 w-24 lg:w-40 lg:-left-20 xl:w-56 xl:-left-28 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+          { <span class="typing-demo-8">&nbsp;Get Direction</span> }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          EVENT VENUE
+        </h2>
+      </div>
+
+      <div class="w-[80%] mx-auto leading-loose">
+        <!-- Two columns -->
+        <div class=" flex flex-wrap md:flex-nowrap mb-6 gap-1 p-0 md:text-3xl md:leading-10 text-xl leading-6">
+            <div class="z-0 overflow-hidden relative h-[80vw] w-[100%] md:h-auto md:w-1/2 bg-gray-400">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.729818871565!2d3.1717269148095455!3d36.70502987996815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e522f3f317461%3A0x215c157a5406653c!2sEcole%20Nationale%20Sup%C3%A9rieure%20d&#39;Informatique!5e0!3m2!1sfr!2sdz!4v1647876037850!5m2!1sfr!2sdz" class="left-0 top-0 h-[100%] w-[100%] absolute" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="md:w-1/2 py-8 md:px-8 flex flex-col justify-center">
+                <p class="pb-5 font-bold text-1xl mb-4 sm:text-2xl sm:mb-6 md:text-3xl md:mb-8">
+                  École nationale supérieure d'informatique, Algiers
+                </p>
+                <p class="text-white font-light text-md sm:text-lg md:text-xl lg:text-2xl">
+                  Formerly the National Institute for Computer Training (INI), is an Algerian higher education institution training state engineers in computer science. It is located in Oued Smar, about 15 km from the city center of the capital Algiers, in Algeria.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Three columns -->
+        <div class="flex md:flex-nowrap flex-wrap my-4 gap-2 md:text-3xl md:leading-10 text-xl leading-6">
+            <div class="w-[100%] md:w-1/4 venue-img">
+              <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266965/bsides_site/venue-gallery/1_gppl7a.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266965/bsides_site/venue-gallery/1_gppl7a.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="w-[100%] md:w-1/4 venue-img">
+              <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266956/bsides_site/venue-gallery/2_zpcjni.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266956/bsides_site/venue-gallery/2_zpcjni.jpg" alt="" >
+              </a>
+            </div>
+
+            <div class="w-[100%] md:w-1/4 venue-img">
+              <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266965/bsides_site/venue-gallery/3_hxgrs4.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266965/bsides_site/venue-gallery/3_hxgrs4.jpg" alt="">
+              </a>
+            </div>
+
+            <div class="w-[100%] md:w-1/4 venue-img">
+              <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266975/bsides_site/venue-gallery/4_votarv.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266975/bsides_site/venue-gallery/4_votarv.jpg" alt="" >
+              </a>
+            </div>
+        </div>
+
+        <!-- Three columns -->
+        <div class="flex md:flex-nowrap flex-wrap my-4 gap-2 md:text-3xl md:leading-10 text-xl leading-6">
+          <div class="w-[100%] md:w-1/4 venue-img">
+            <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266948/bsides_site/venue-gallery/5_byhiqs.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266948/bsides_site/venue-gallery/5_byhiqs.jpg" alt="" >
+            </a>
+          </div>
+
+          <div class="w-[100%] md:w-1/4 venue-img">
+            <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266993/bsides_site/venue-gallery/11_eso4xw.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266993/bsides_site/venue-gallery/11_eso4xw.jpg" alt="" >
+            </a>
+          </div>
+
+          <div class="w-[100%] md:w-1/4 venue-img">
+            <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266985/bsides_site/venue-gallery/7_ollkur.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266985/bsides_site/venue-gallery/7_ollkur.jpg" alt="">
+            </a>
+          </div>
+
+          <div class="w-[100%] md:w-1/4 venue-img">
+            <a href="https://res.cloudinary.com/shellmates-club/image/upload/v1641266969/bsides_site/venue-gallery/9_sjk9sr.jpg" class="venobox" data-gall="venue-gallery">
+              <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1641266969/bsides_site/venue-gallery/9_sjk9sr.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+      </div>
+
+    </div>
+    </section>
     <!-- End -->
 
 
     <!-- Content section -->
-    
+    <section id="content" class="py-16 flex flex-col gap-y-8 lg:gap-y-12 relative overflow-hidden" data-aos="fade-up"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-sine">
+      <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422479/hackini/assets/hero_top_right_mkud7e.svg" class="absolute -right-16 top-8 w-24 lg:w-40 lg:-right-20 xl:w-56 xl:-right-28 h-auto  rotate" alt="">
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+          { <span class="typing-demo-11">&nbsp;Event's Content</span> }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+            CONTENT
+        </h2>
+      </div>
+      <div class="flex flex-wrap mx-auto gap-x-16">
+        <div class="w-56 h-56 xl:w-72 xl:h-72 sm:col-span-2 md:col-span-1 text-center items-center relative mx-auto my-4">
+            <img src="./public/assets/contentbg.svg" class="w-full h-full rotate relative" alt="">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <h3 class="title-gradient text-3xl lg:text-4xl xl:text-5xl font-bold">+04</h3>
+              <p class="title-gradient text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">Workshops</p>
+            </div>
+        </div>
+        <div class="w-56 h-56 xl:w-72 xl:h-72 sm:col-span-2 md:col-span-1 text-center items-center relative mx-auto my-4">
+            <img src="./public/assets/contentbg.svg" class="w-full h-full rotate relative" alt="">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <h3 class="title-gradient text-3xl lg:text-4xl xl:text-5xl font-bold">+07</h3>
+              <p class="title-gradient text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">Mentors</p>
+            </div>
+        </div>
+        <div class="w-56 h-56 xl:w-72 xl:h-72 sm:col-span-2 md:col-span-1 text-center items-center relative mx-auto my-4">
+            <img src="./public/assets/contentbg.svg" class="w-full h-full rotate relative" alt="">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <h3 class="title-gradient text-3xl lg:text-4xl xl:text-5xl font-bold">+25</h3>
+              <p class="title-gradient text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">Challenges</p>
+            </div>
+        </div>
+      </div>
+    </section>
     <!-- End -->
 
-    <!-- Speakers section -->
-
-    <!-- End -->
+   <!-- Speakers section -->
+  <section id="nspeakers" class="flex flex-col items-center gap-y-8 lg:gap-y-12 relative py-16 overflow-hidden" data-aos="fade-up"
+  data-aos-duration="500"
+  data-aos-easing="ease-in-sine">
+    <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422478/hackini/assets/hero_bottom_right_armqbz.svg" class="absolute -right-16 bottom-8 w-24 lg:w-40 lg:-right-20 xl:w-56 xl:-right-28 h-auto  rotate" alt="">
+    <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+      <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+        { <span class="typing-demo-10">&nbsp;Get to know our Speakers</span> }
+      </h3>
+      <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+        Speakers
+      </h2>
+    </div>
+    <div class="w-4/5 inline-flex justify-between gap-x-8 lg:gap-x-16 relative overflow-x-scroll 2xl:overflow-auto">
+      <div class="w-60 flex flex-col mx-auto gap-y-4 my-4">
+        <img class="w-full h-72 object-cover" src="https://cdn.discordapp.com/attachments/844976555670372392/976218266794098788/280186699_1330298554130422_5427442290936090536_n.png"/>
+          <div class="w-60 flex flex-col mx-auto my-4 justify-between h-44">
+              <div>
+                <h4 class="text-xl">Imad Eddine Bourouche</h4>
+                <p class="font-thin text-sm my-2">1CS student and shellmates member.</p>
+              </div>
+              <div class="flex gap-x-4 mt-2">
+                  <a href="https://www.facebook.com/imadbourouche" target="_blank">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/imad-eddine-bourouche-92974521a/" target="_blank">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="w-60 flex flex-col mx-auto gap-y-4 my-4">
+        <img class="w-full h-72 object-cover" src="https://cdn.discordapp.com/attachments/844976555670372392/976223929083523083/IMG_20220425_160600.jpg"/>
+          <div class="w-60 flex flex-col mx-auto my-4 justify-between h-44">
+              <div>
+                <h4 class="text-xl">Amel Khamoum</h4>
+                <p class="font-thin text-sm my-2">
+                  4th year computer systems engineering student at ESI.
+                  Github Campus Expert.
+                  Cybersecurity Enthusiast and CTF Player.
+                </p>
+              </div>
+              <div class="flex gap-x-4 mt-2">
+                  <a href="https://www.facebook.com/amel.khamoum.5" target="_blank">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/amel-khamoum/" target="_blank">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="w-60 flex flex-col mx-auto gap-y-4 my-4">
+        <img class="w-full h-72 object-cover" src="https://cdn.discordapp.com/attachments/845301707738841108/923278989617950740/bilal.png"/>
+          <div class="w-60 flex flex-col mx-auto my-4 h-44 justify-between">
+              <div>
+                <h4 class="text-xl">Retiat Bilal</h4>
+                <p class="font-thin text-sm my-2">Cyber Security Specialist at Realistic Security, working on penetration testing and incident response. Elastic Certified Analyst.</p>
+              </div>
+              <div class="flex gap-x-4 mt-2">
+                  <a href="https://twitter.com/philomath213" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/bilal-retiat/" target="_blank">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="w-60 flex flex-col mx-auto gap-y-4 my-4">
+        <img class="w-full h-72 object-cover" src="https://cdn.discordapp.com/attachments/844976555670372392/976227853899284541/FB_IMG_1652815756790.jpg"/>
+          <div class="w-60 flex flex-col mx-auto my-4 h-44 justify-between">
+              <div>
+                <h4 class="text-xl">Mohamed Elghazali Kimeche</h4>
+                <p class="font-thin text-sm my-2">4th year student at ESI, cyber security enthusiast and CTF player with OctaC0re team. Obsessed with Network Security & Digital Forensics.</p>
+              </div>
+              <div class="flex gap-x-4 mt-2">
+                  <a href="https://www.facebook.com/M.E.K.elghazali" target="_blank">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/gzli/" target="_blank">
+                      <i class="fa fa-linkedin"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- End -->
 
     <!-- Gallery section -->
-    <section id="ngallery" class="my-32 flex flex-col gap-y-8 lg:gap-y-12"
+    <section id="ngallery" class="my-48 flex flex-col gap-y-8 lg:gap-y-12"
       data-aos="fade-up"
       data-aos-duration="500"
       data-aos-easing="ease-in-sine">
@@ -451,7 +658,90 @@
     <!-- End -->
       
     <!-- Agenda section -->
-
+    <section id="nagenda" class="my-32 flex flex-col gap-y-8 lg:gap-y-12 relative" data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+      <img
+        src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422477/hackini/assets/2_cpkgnn.svg"
+        class="absolute -left-12 bottom-0 w-24 lg:w-40 lg:-left-16 xl:w-56 xl:-left-20 h-auto rotate"
+        alt=""
+      />
+      <div class="flex flex-col items-center gap-y-2 lg:gap-y-4 relative">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-extralight wrapper">
+          { <span class="typing-demo-9">&nbsp;Event timeline</span> }
+        </h3>
+        <h2 class="uppercase text-3xl lg:text-4xl font-bold title-gradient">
+          Agenda
+        </h2>
+      </div>
+      <div
+        id="agenda"
+        class="flex flex-col w-4/5 xl:w-3/5 mx-auto gap-y-8 relative"
+      >
+        <div class="flex md:gap-x-16 lg:gap-x-32" data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+          <div class="w-28 md:w-36">
+            <h4 class="uppercase font-bold title-gradient text-lg md:text-3xl">
+              Day 01
+            </h4>
+            <h5 class="title-gradient text-base md:text-xl lg:text-2xl">
+              May 26th
+            </h5>
+          </div>
+          <div
+            class="md:text-lg lg:text-xl xl:text-2xl grad flex flex-col gap-y-2 w-3/5 md:w-auto"
+          >
+            <div>17:00 : Check-in</div>
+            <div>18:30 : Opening ceremony</div>
+            <div>19:30 : CTF Start</div>
+            <div>21:00 : Dinner</div>
+          </div>
+        </div>
+        <div class="flex md:gap-x-16 lg:gap-x-32" data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+          <div class="w-28 md:w-36">
+            <h4 class="uppercase font-bold title-gradient text-lg md:text-3xl">
+              Day 02
+            </h4>
+            <h5 class="title-gradient text-base md:text-xl lg:text-2xl">
+              May 27th
+            </h5>
+          </div>
+          <div
+            class="md:text-lg lg:text-xl xl:text-2xl grad flex flex-col gap-y-2 w-3/5 md:w-auto"
+          >
+            <div>07:30 : Breakfast</div>
+            <div>09:00 - 10:30 : Digital forensics</div>
+            <div>11:00 - 12:30 : Docker security</div>
+            <div>12:30 : Lunch break</div>
+            <div>14:30 - 16:30 : Cryptographic Vulnerabilities</div>
+            <div>16:00 : Coffee Break</div>
+            <div>16:30 - 18:00 : Intro to Binary Exploitation</div>
+            <div>21:00 : Dinner</div>
+          </div>
+        </div>
+        <div class="flex md:gap-x-16 lg:gap-x-32" data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+          <div class="w-28 md:w-36">
+            <h4 class="uppercase font-bold title-gradient text-lg md:text-3xl">
+              Day 03
+            </h4>
+            <h5 class="title-gradient text-base md:text-xl lg:text-2xl">
+              May 28th
+            </h5>
+          </div>
+          <div
+            class="md:text-lg lg:text-xl xl:text-2xl grad flex flex-col gap-y-2 w-3/5 md:w-auto"
+          >
+            <div>07:30 : CTF end, Breakfast</div>
+            <div>08:30 : Closing ceremony</div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- End -->
 
     <!-- Reviews section -->
@@ -821,7 +1111,7 @@ data-aos-easing="ease-in-sine"
        </div>
        <div class=" flex lg:flex-row flex-col items-center justify-center lg:w-1/3">
            <div class="lg:mr-8 mb-5 lg:mb-auto">
-               <img src="./public/assets//shellmate_logo.png" alt="" class="w-12 md:w-20">
+               <img src="https://res.cloudinary.com/shellmates-club/image/upload/v1653422511/hackini/assets/shellmate_logo_yb49aj.png" alt="" class="w-12 md:w-20">
            </div>
            <div class="flex flex-col items-center justify-center ">
                <div class="flex  items-left justify-between">
